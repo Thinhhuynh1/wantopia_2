@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trang Tâm tư của Wantopia - Trạm Ước Vọng." />
+    <title>Wantopia | Tâm Tư</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/script-CqpP9G7j.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/script-Vssv-1BA.css">
+  </head>
+  <body class="page-body preload" data-page="stories">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container">
+          <nav class="navbar" aria-label="Điều hướng chính">
+            <a class="brand" href="./index.html" data-transition="scale">
+              <img src="/assets/la-ban-BcN1ilHi.png" alt="Logo Wantopia" class="brand__mark" />
+              <span class="brand__text">
+                <strong>Wantopia</strong>
+                <small>Trạm Ước Vọng</small>
+              </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Mở menu">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="nav-panel" id="site-menu">
+              <a class="nav-link" href="./index.html" data-transition="scale">Trang chủ</a>
+              <a class="nav-link" href="./su-kien.html" data-transition="left">Sự kiện</a>
+              <a class="nav-link" href="./cua-hang.html" data-transition="bottom">Cửa hàng</a>
+              <a class="nav-link" href="./tam-tu.html" data-transition="right" aria-current="page">Tâm tư</a>
+              <a class="nav-link" href="./lien-he.html" data-transition="top">Liên hệ</a>
+            </div>
+            <a class="button button--primary nav-cta" href="./login.html" data-transition="top">Đăng nhập</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="thought-hero">
+          <img src="/assets/tam-tu-CouXAm9R.jpg" alt="Khung cảnh Tâm tư Wantopia" class="thought-hero__image" />
+          <div class="thought-hero__overlay"></div>
+
+          <div class="container thought-hero__content">
+            <div class="thought-copy reveal">
+              <p class="eyebrow">Tâm tư</p>
+              <h1 class="page-hero__title">Viết vào đây những điều mình muốn nói nhé.</h1>
+              <p class="page-hero__text">
+                Trang này giữ tinh thần từ file bạn thêm vào, nhưng được làm lại theo cùng bảng màu tối với
+                trang chủ để cảm giác lắng lại, riêng tư và đồng nhất hơn.
+              </p>
+
+              <div class="tag-row">
+                <span>Hôm nay mình đang cảm thấy gì?</span>
+                <span>Điều gì mình chưa từng nói ra?</span>
+                <span>Mình muốn trở thành phiên bản nào?</span>
+              </div>
+            </div>
+
+            <form class="thought-form reveal" id="message-form">
+              <p class="card__label">Gửi một lời nhắn</p>
+              <label>
+                Tên của bạn
+                <input type="text" name="name" placeholder="Ví dụ: Minh Anh" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="ban@example.com" required />
+              </label>
+              <label>
+                Tâm tư hôm nay
+                <textarea
+                  name="message"
+                  rows="7"
+                  placeholder="Viết vào đây những điều mình muốn nói nhé..."
+                  required
+                ></textarea>
+              </label>
+              <button class="button button--primary" type="submit">Gửi tâm tư</button>
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="section section--soft">
+          <div class="container store-layout">
+            <article class="card reveal">
+              <p class="card__label">Không gian</p>
+              <h3>Viết ra mà không bị vội vàng</h3>
+              <p>Phần này được thiết kế để người dùng có cảm giác an toàn, chậm lại và thật hơn với chính mình.</p>
+            </article>
+            <article class="card reveal">
+              <p class="card__label">Mở rộng</p>
+              <h3>Kết nối với đăng nhập thật</h3>
+              <p>Bạn có thể dùng ngay trang Đăng nhập mới để nối với Firebase Auth, Supabase Auth hoặc API riêng.</p>
+            </article>
+            <article class="card reveal">
+              <p class="card__label">Liên kết</p>
+              <h3>Muốn xem hành trình đầy đủ?</h3>
+              <p>Tiếp tục qua trang Sự kiện để thấy toàn bộ concept, flow trải nghiệm và tinh thần của Wantopia.</p>
+              <a class="button button--ghost button--small" href="./su-kien.html" data-transition="left">Xem sự kiện</a>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <img src="/assets/la-ban-BcN1ilHi.png" alt="Logo Wantopia" class="footer-brand__logo" />
+            <div>
+              <h2>GET IN TOUCH</h2>
+              <p>Liên hệ với chúng tôi để tìm hiểu thêm về sự kiện của Wantopia.</p>
+            </div>
+          </div>
+          <div class="footer-columns">
+            <div><h3>Email</h3><p>wantopia.tramuocvong@gmail.com</p></div>
+            <div><h3>Hotline</h3><p>(+84) 0345 887 158</p></div>
+            <div><h3>Địa chỉ</h3><p>Phòng D03138, 19 Nguyễn Hữu Thọ, Phường Tân Hưng, TP. Hồ Chí Minh</p></div>
+          </div>
+          <div class="footer-bottom">
+            <span>© <span data-year></span> IICONIC. All Rights Reserved.</span>
+            <span>BE THE ONE YOU WANT.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

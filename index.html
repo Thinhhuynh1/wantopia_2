@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Wantopia - Trạm Ước Vọng, landing page nhiều trang bằng HTML, CSS và JavaScript thuần."
+    />
+    <title>Wantopia | Trang Chủ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body class="page-body preload" data-page="home">
+    <div class="page-shell">
+      <header class="site-header site-header--overlay">
+        <div class="container">
+          <nav class="navbar" aria-label="Điều hướng chính">
+            <a class="brand" href="./index.html" data-transition="scale">
+              <img src="./assets/img/la-ban.png" alt="Logo Wantopia" class="brand__mark" />
+              <span class="brand__text">
+                <strong>Wantopia</strong>
+                <small>Trạm Ước Vọng</small>
+              </span>
+            </a>
+
+            <button
+              class="menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-menu"
+              aria-label="Mở menu"
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="nav-panel" id="site-menu">
+              <a class="nav-link" href="./index.html" data-transition="scale" aria-current="page">Trang chủ</a>
+              <a class="nav-link" href="./su-kien.html" data-transition="left">Sự kiện</a>
+              <a class="nav-link" href="./cua-hang.html" data-transition="bottom">Cửa hàng</a>
+              <a class="nav-link" href="./tam-tu.html" data-transition="right">Tâm tư</a>
+              <a class="nav-link" href="./lien-he.html" data-transition="top">Liên hệ</a>
+            </div>
+
+            <a class="button button--primary nav-cta" href="./login.html" data-transition="top">Đăng nhập</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-video">
+          <video class="hero-video__media" autoplay loop muted playsinline aria-hidden="true">
+            <source
+              src="/assets/Video_hero.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="hero-video__overlay" aria-hidden="true"></div>
+
+          <div class="container hero-video__content">
+            <div class="">
+              <p class="eyebrow">Be The One You Want</p>
+              <h1 class="hero-video__title">Wantopia<br />Trạm Ước Vọng</h1>
+              <p class="hero-video__text">
+                Một không gian nơi bạn được dừng lại, lắng nghe cảm xúc, viết ra điều mình chưa từng nói
+                và bắt đầu hành trình trở thành phiên bản mà bản thân thật sự mong muốn.
+              </p>
+
+              <div class="hero-video__actions">
+                <a class="button button--primary" href="./tam-tu.html" data-transition="right">Viết tâm tư</a>
+                <a class="button button--ghost" href="./su-kien.html" data-transition="left">Khám phá sự kiện</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--lifted">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">Thông tin chính</p>
+              <h2 class="section-title">Một điểm dừng để nhìn lại hành trình và đi tiếp với nhiều sáng rõ hơn.</h2>
+            </div>
+
+            <div class="info-grid info-grid--home">
+              <article class="card reveal">
+                <p class="card__label">Ngày diễn ra</p>
+                <h3>06 / 2027</h3>
+                <p>Thời điểm mở ra hành trình trải nghiệm, kết nối và chữa lành của cộng đồng Wantopia.</p>
+              </article>
+
+              <article class="card reveal">
+                <p class="card__label">Địa điểm</p>
+                <h3>SECC - Sảnh B</h3>
+                <p>Một không gian rộng cho triển lãm, workshop, listening room và các điểm chạm cảm xúc cùng tồn tại.</p>
+              </article>
+
+              <article class="card reveal">
+                <p class="card__label">Key message</p>
+                <h3>Hãy là phiên bản mà bạn mong muốn</h3>
+                <p>Một lời nhắc dịu nhưng rõ, để mỗi người lắng nghe mình và bước tiếp với định hướng riêng.</p>
+              </article>
+
+              <article class="card card--map card--map-wide reveal">
+                <p class="card__label">Bản đồ</p>
+                <div class="map-frame">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0496098960616!2d106.7213436!3d10.7306572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f884b977323%3A0x12bab2d8a70949ca!2zVHJ1bmcgdMOibSBI4buZaSBjaOG7oyB2w6AgVHJp4buDbiBsw6NtIFPDoGkgR8Oybg!5e0!3m2!1svi!2s!4v1774167683333!5m2!1svi!2s"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Bản đồ SECC"
+                  ></iframe>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container feature-layout">
+            <div class="feature-layout__media reveal">
+              <img src="./assets/img/poster-doc.jpg" alt="Poster dọc Wantopia" />
+            </div>
+
+            <div class="feature-layout__content reveal">
+              <p class="eyebrow">Tại sao lại là Wantopia</p>
+              <h2 class="section-title">Một thế giới nơi tuổi trẻ được phép dừng lại, lắng nghe và tái định vị.</h2>
+
+              <div class="feature-list">
+                <article class="feature-item">
+                  <h3>Mục tiêu</h3>
+                  <p>
+                    Sự kiện hướng đến sinh viên năm cuối và đánh dấu cột mốc 30 năm thành lập Trường Đại học
+                    Tôn Đức Thắng cùng 10 năm của Khoa Khoa học Thể thao.
+                  </p>
+                </article>
+                <article class="feature-item">
+                  <h3>Concept</h3>
+                  <p>
+                    Đoàn tàu TDTU lướt theo đường ray xoắn ốc lên tầng mây, đưa mỗi người trở lại với phiên
+                    bản mà họ thật sự mong muốn trở thành.
+                  </p>
+                </article>
+                <article class="feature-item">
+                  <h3>Tagline</h3>
+                  <p>Hãy là phiên bản mà bạn mong muốn. Be the one you want.</p>
+                </article>
+                <article class="feature-item">
+                  <h3>Key message</h3>
+                  <p>
+                    Chuyến tàu tuổi trẻ mang theo ước mơ, nỗ lực và dấu ấn trưởng thành. Dừng tại Trạm Ước
+                    Vọng, mỗi người nhìn lại hành trình của mình và bước tiếp với nhiều sáng rõ hơn.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <img src="./assets/img/la-ban.png" alt="Logo Wantopia" class="footer-brand__logo" />
+            <div>
+              <h2>GET IN TOUCH</h2>
+              <p>Liên hệ với chúng tôi để tìm hiểu thêm về sự kiện của Wantopia.</p>
+            </div>
+          </div>
+
+          <div class="footer-columns">
+            <div>
+              <h3>Email</h3>
+              <p>wantopia.tramuocvong@gmail.com</p>
+            </div>
+            <div>
+              <h3>Hotline</h3>
+              <p>(+84) 0345 887 158</p>
+            </div>
+            <div>
+              <h3>Địa chỉ</h3>
+              <p>Phòng D03138, 19 Nguyễn Hữu Thọ, Phường Tân Hưng, TP. Hồ Chí Minh</p>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <span>© <span data-year></span> IICONIC. All Rights Reserved.</span>
+            <span>BE THE ONE YOU WANT.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

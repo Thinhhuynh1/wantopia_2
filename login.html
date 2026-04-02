@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trang đăng nhập demo của Wantopia - Trạm Ước Vọng." />
+    <title>Wantopia | Đăng Nhập</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body class="page-body preload" data-page="login">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container">
+          <nav class="navbar" aria-label="Điều hướng chính">
+            <a class="brand" href="./index.html" data-transition="scale">
+              <img src="./assets/img/la-ban.png" alt="Logo Wantopia" class="brand__mark" />
+              <span class="brand__text">
+                <strong>Wantopia</strong>
+                <small>Trạm Ước Vọng</small>
+              </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Mở menu">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="nav-panel" id="site-menu">
+              <a class="nav-link" href="./index.html" data-transition="scale">Trang chủ</a>
+              <a class="nav-link" href="./su-kien.html" data-transition="left">Sự kiện</a>
+              <a class="nav-link" href="./cua-hang.html" data-transition="bottom">Cửa hàng</a>
+              <a class="nav-link" href="./tam-tu.html" data-transition="right">Tâm tư</a>
+              <a class="nav-link" href="./lien-he.html" data-transition="top">Liên hệ</a>
+            </div>
+            <a class="button button--primary nav-cta" href="./login.html" data-transition="top">Đăng nhập</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="auth-page">
+          <div class="container auth-layout">
+            <div class="auth-copy reveal">
+              <p class="eyebrow">Member Access</p>
+              <h1 class="page-hero__title">Đăng nhập để lưu lại hành trình của bạn tại Wantopia.</h1>
+              <p class="page-hero__text">
+                Đây là giao diện đăng nhập demo để bạn học tập và phát triển tiếp. Bạn có thể nối form này với
+                Firebase Auth, Supabase Auth hoặc API riêng khi cần triển khai thật.
+              </p>
+              <div class="tag-row">
+                <span>Lưu tâm tư riêng</span>
+                <span>Đồng bộ dữ liệu cá nhân</span>
+                <span>Mở rộng sang dashboard</span>
+              </div>
+            </div>
+
+            <form class="auth-panel reveal" id="login-form">
+              <p class="card__label">Đăng nhập</p>
+              <h2 class="auth-panel__title">Chào mừng bạn quay lại.</h2>
+              <label class="form-field">
+                Email
+                <input type="email" name="email" placeholder="ban@example.com" required />
+              </label>
+              <label class="form-field">
+                Mật khẩu
+                <input type="password" name="password" placeholder="Nhập mật khẩu" required />
+              </label>
+              <div class="auth-panel__actions">
+                <button class="button button--primary" type="submit">Đăng nhập</button>
+                <a class="button button--ghost" href="./tam-tu.html" data-transition="right">Tới trang Tâm tư</a>
+              </div>
+              <p class="form-status" id="login-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <img src="./assets/img/la-ban.png" alt="Logo Wantopia" class="footer-brand__logo" />
+            <div>
+              <h2>GET IN TOUCH</h2>
+              <p>Liên hệ với chúng tôi để tìm hiểu thêm về sự kiện của Wantopia.</p>
+            </div>
+          </div>
+          <div class="footer-columns">
+            <div><h3>Email</h3><p>wantopia.tramuocvong@gmail.com</p></div>
+            <div><h3>Hotline</h3><p>(+84) 0345 887 158</p></div>
+            <div><h3>Địa chỉ</h3><p>Phòng D03138, 19 Nguyễn Hữu Thọ, Phường Tân Hưng, TP. Hồ Chí Minh</p></div>
+          </div>
+          <div class="footer-bottom">
+            <span>© <span data-year></span> IICONIC. All Rights Reserved.</span>
+            <span>BE THE ONE YOU WANT.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
