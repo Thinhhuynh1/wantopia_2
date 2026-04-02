@@ -3,17 +3,22 @@ import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const frontendRoot = resolve(__dirname, "front-end");
 
 export default defineConfig({
+  base: "./",
+  root: frontendRoot,
   build: {
+    outDir: resolve(__dirname, "dist"),
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        home: resolve(__dirname, "index.html"),
-        events: resolve(__dirname, "su-kien.html"),
-        store: resolve(__dirname, "cua-hang.html"),
-        stories: resolve(__dirname, "tam-tu.html"),
-        contact: resolve(__dirname, "lien-he.html"),
-        login: resolve(__dirname, "login.html"),
+        home: resolve(frontendRoot, "index.html"),
+        events: resolve(frontendRoot, "su-kien.html"),
+        store: resolve(frontendRoot, "cua-hang.html"),
+        stories: resolve(frontendRoot, "tam-tu.html"),
+        contact: resolve(frontendRoot, "lien-he.html"),
+        login: resolve(frontendRoot, "login.html"),
       },
     },
   },
