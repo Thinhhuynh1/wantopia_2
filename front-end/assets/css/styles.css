@@ -431,8 +431,9 @@ main {
 .page-hero__title {
   margin: 0;
   font-size: clamp(3.3rem, 7vw, 6.4rem);
-  line-height: 0.92;
+  line-height: 1.25;
   letter-spacing: -0.05em;
+
 }
 
 .hero-video__text,
