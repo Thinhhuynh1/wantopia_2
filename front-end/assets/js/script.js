@@ -271,3 +271,31 @@ if (reduceMotion) {
 
   revealItems.forEach((item) => observer.observe(item));
 }
+
+
+//Popup coming-soon Page su kien
+document.addEventListener('DOMContentLoaded', function() {
+  // Logic xử lý popup "Coming Soon"
+  const comingSoonBoxes = document.querySelectorAll('.coming-soon');
+  const toast = document.getElementById('custom-toast');
+  const toastMessage = document.getElementById('toast-message');
+  let toastTimer;
+
+  if(comingSoonBoxes.length > 0 && toast) {
+    comingSoonBoxes.forEach(box => {
+      box.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn trình duyệt nhảy trang khi click vào link #
+        
+        const message = this.getAttribute('data-message');
+        toastMessage.textContent = message;
+
+        toast.classList.add('show');
+
+        clearTimeout(toastTimer); 
+        toastTimer = setTimeout(() => {
+          toast.classList.remove('show');
+        }, 3000);
+      });
+    });
+  }
+});

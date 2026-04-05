@@ -1263,4 +1263,122 @@ main {
     opacity: 1 !important;
     transform: none !important;
   }
+
+
+
+}
+
+  .card.reveal.reveal.is-visible {
+  transition: all 0.3s ease; /* Làm mượt mọi chuyển động */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Bóng đổ nhẹ mặc định */
+  cursor: pointer;
+  text-decoration: none; /* Bỏ gạch chân nếu bọc bằng thẻ <a> */
+  color: inherit; /* Giữ nguyên màu chữ đen ban đầu */
+  display: block; /* Nếu là thẻ <a> thì cần display block để ôm trọn nội dung */
+}
+
+/* Khi di chuột vào box */
+.card.reveal.reveal.is-visible:hover {
+  transform: translateY(-8px); /* Nhấc box lên 8 pixel */
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1); /* Bóng đổ đậm và to hơn */
+}
+
+/* Style cho Popup Thông báo (Toast) */
+#custom-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: #5E3A26;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+/* Class để popup hiện lên mượt mà */
+#custom-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   TRANG ĐỘI NGŨ (CẬP NHẬT GỌN NHẸ)
+   ========================================================================== */
+.team-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.group-photo {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 60px;
+}
+
+.group-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Chuyển sang Flexbox để dễ dàng canh giữa 5 người hàng trên, 4 người hàng dưới */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 950px; /* Giới hạn chiều rộng để ép xuống 2 hàng cho đẹp */
+  margin: 0 auto;
+}
+
+/* Khung nhỏ gọn lại */
+.member-card {
+  width: 160px; /* Ép kích thước card nhỏ lại */
+  text-align: center;
+  padding: 20px 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px); /* Hiệu ứng nhấc lên nhẹ khi di chuột */
+}
+
+/* Avatar nhỏ lại */
+.member-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px auto;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tên thành viên */
+.member-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
 }
