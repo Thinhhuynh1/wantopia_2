@@ -105,6 +105,81 @@ function handlePageTransition(link, event) {
   }, reduceMotion ? 0 : 380);
 }
 
+function initThoughtPrompts() {
+  const allPrompts = [
+    "Điều gì mình chưa từng nói ra?",
+    "Mình muốn trở thành phiên bản nào?",
+    "5 năm nữa mình sẽ trở thành",
+    "Một bài hát khi nghe bạn sẽ liên tưởng đến TDTU",
+    "Cái tên mà bạn quý nhất Tôn Đức Thắng?",
+    "Đại học Tôn Đức Thắng, vì một…",
+    "Món ăn mà bạn yêu thích nhất khi học tại TDTU",
+    "Kỷ niệm mà mình nhớ nhất tại TDTU là",
+    "Nếu có 1 điều ước",
+    "Nếu được quay lại năm nhất, bạn sẽ?",
+  ];
+
+  const batchSize = 2;
+  const suggestionList = document.querySelector("[data-suggestion-list]");
+  const nextButton = document.querySelector("[data-suggestion-next]");
+  const textarea = document.querySelector("[data-thought-textarea]");
+
+  if (!suggestionList || !nextButton || !textarea) {
+    return;
+  }
+
+  let promptPool = [];
+
+  function refillPromptPool() {
+    promptPool = [...allPrompts];
+  }
+
+  function fillTextarea(text) {
+    textarea.value = text;
+    textarea.focus();
+    textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+  }
+
+  function createSuggestionChip(text) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "suggestion-chip";
+    chip.textContent = text;
+    // chip.addEventListener("click", () => fillTextarea(text));
+    return chip;
+  }
+
+  function drawRandomPrompts(count) {
+    const selectedPrompts = [];
+
+    while (selectedPrompts.length < count) {
+      if (promptPool.length === 0) {
+        refillPromptPool();
+      }
+
+      const randomIndex = Math.floor(Math.random() * promptPool.length);
+      const [prompt] = promptPool.splice(randomIndex, 1);
+      selectedPrompts.push(prompt);
+    }
+
+    return selectedPrompts;
+  }
+
+  function renderSuggestions(prompts) {
+    suggestionList.innerHTML = "";
+    prompts.forEach((prompt) => {
+      suggestionList.appendChild(createSuggestionChip(prompt));
+    });
+  }
+
+  nextButton.addEventListener("click", () => {
+    renderSuggestions(drawRandomPrompts(batchSize));
+  });
+
+  refillPromptPool();
+  renderSuggestions(drawRandomPrompts(batchSize));
+}
+
 if (menuToggle && navPanel) {
   menuToggle.addEventListener("click", () => {
     const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
@@ -155,8 +230,7 @@ if (messageForm && formStatus) {
     const name = String(formData.get("name") || "bạn").trim() || "bạn";
 
     messageForm.reset();
-    formStatus.textContent =
-      `Cảm ơn ${name} đã gửi tâm tư. Wantopia đã nhận được lời nhắn của bạn trong bản demo này.`;
+    formStatus.textContent = `Cảm ơn ${name} đã gửi tâm tư. Wantopia đã nhận được lời nhắn của bạn trong bản demo này.`;
   });
 }
 
@@ -168,10 +242,11 @@ if (loginForm && loginStatus) {
     const email = String(formData.get("email") || "").trim() || "tài khoản của bạn";
 
     loginForm.reset();
-    loginStatus.textContent =
-      `Đăng nhập demo thành công cho ${email}. Bạn có thể nối form này với Firebase, Supabase hoặc API riêng khi cần.`;
+    loginStatus.textContent = `Đăng nhập demo thành công cho ${email}. Bạn có thể nối form này với Firebase, Supabase hoặc API riêng khi cần.`;
   });
 }
+
+initThoughtPrompts();
 
 if (reduceMotion) {
   body.classList.remove("preload");
